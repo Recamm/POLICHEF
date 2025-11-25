@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap'); /* Text - Kumbh Sans */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap'); /* Title - Crimson Text */
+
+:root {
+    --colorPoliChef: #9C070C;
+    --colorBlack: #0C0C0C;
+    --colorWhite: #FFFFFF;
+    --colorGrey: #1E1E1E;
+    --colorPoliChefHover: #bd0a10;
+
+    --fontFamily: "Kumbh Sans", sans-serif;
+    --fontWeightRegular: 400; /* Text */
+    --fontWeightExtrabold: 700; /* Title */
+    --fontSizeText: 1rem; /* Text */
+    --fontSizeSubtitle: 1.25rem; /* Subtitle */
+    --fontSizeTitle: 2rem; /* Title */
+
+    /* MOBILE */
+    --fontSizeTextMobile: 0.75rem; /* Text */
+    --fontSizeSubtitleMobile: 1rem; /* Subtitle */
+    --fontSizeTitleMobile: 1.5rem; /* Title */
+
+    --fontFamilyPolichefLogo: "Crimson Text", serif;
+    --fontWeightLogo: 600; /* Logo */
+
+    --animationTime: 0.15s;
+
+    --maxWidth: 1280px;
+
+    --headerHeight: 80px;
+}
+
+* {
+    font-family: var(--fontFamily);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--colorWhite);
+}
+
+
+/* BACKGROUND */
+html {
+    background-color: var(--colorBlack);
+}
+
+main {
+    margin: var(--headerHeight) 0 0 0;
+}
+
+.bodyWidth {
+    width: var(--maxWidth);
+}
+
+/* RESETS */
+.a {
+    text-decoration: none;
+}
+
+
+/* ALL TEXT */
+html {
+  /* font-size: 16px; */
+} 
+
+.text {
+    font-family: var(--fontFamily);
+    font-weight: var(--fontWeightRegular);
+    size: var(--fontSizeText);
+    color: var(--colorWhite);
+}
+
+.title {
+    font-family: var(--fontFamily);
+    font-weight: var(--fontWeightExtrabold);
+    size: var(--fontSizeTitle);
+    color: var(--colorWhite);
+}
+
+.titleLine {
+    background-color: var(--colorPoliChef);
+    width: 250px;
+    height: 10px;
+    border-radius: 100px;
+}
+
+/* BUTTON */
+.button {
+    all: unset;
+
+    position: relative;
+    overflow: hidden;
+    
+    width: 100%;
+    padding: 20px 0;
+
+    color: var(--colorWhite);
+    background-color: var(--colorPoliChef);
+
+    border-radius: 100px;
+    font-size: var(--fontSizeText);
+    text-align: center;
+    display: block;
+
+    z-index: 1;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--colorPoliChefHover);
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+.button:hover::before {
+    left: 0;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .button {
+        padding: 15px 0;
+    }
+}

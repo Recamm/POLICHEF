@@ -1,0 +1,116 @@
+main {
+    margin: 0;
+}
+
+.main {
+    width: 100%;
+    /* height: calc(100vh - var(--headerHeight)); */
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 150px;
+    align-items: stretch;
+}
+
+
+/* FOTO */
+.photo {
+    background-color: var(--colorWhite);
+    display: flex;
+    align-items: center;
+}
+
+.photo img {
+    width: 100%;
+    padding: 20%;
+}
+
+
+/* INGRESAR */
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+
+    height: 100%;
+    width: 50%;
+    min-width: 450px;
+}
+
+.titleInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 6.7px;
+}
+
+.titleInfo h1 {
+    font-size: var(--fontSizeTitle);
+    font-weight: var(--fontWeightExtrabold);
+}
+
+.titleInfo p {
+    font-size: var(--fontSizeText);
+    font-weight: var(--fontWeightRegular);
+}
+
+.forgotPassword {
+    color: var(--colorPoliChef);
+    text-decoration: none;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputs input {
+    all:unset;
+    padding: 15px;
+    border-bottom: 1px var(--colorWhite) solid;
+    transition: var(--animationTime);
+}
+
+.inputs input:focus {
+    border-bottom: 1px var(--colorPoliChef) solid;
+}
+
+@media (max-width: 1280px) {
+    .photo {
+        display: none;
+    }
+    .info {
+        height: 100%;
+        width: 67%;
+    }
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .info {
+        height: 100%;
+        width: 90%;
+        min-width: 0;
+    }
+    .titleInfo h1 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* YA TIENES CUENTA */
+.ytc {
+    text-align: center; 
+    margin-top: 15px;
+}
+
+.ytc a {
+    color: var(--colorPoliChef);
+}

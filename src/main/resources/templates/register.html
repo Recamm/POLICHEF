@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/global/styles.css">
+    <link rel="stylesheet" href="../static/css/global/header.css">
+    <link rel="stylesheet" href="../static/css/global/footer.css">
+    <link rel="stylesheet" href="../static/css/pages/loginRegister.css">
+    <link rel="shortcut icon" href="../static/img/logo/flame-polichef-red.svg" type="image/x-icon">
+    <title>Polichef</title>
+</head>
+<body>
+    <main>
+        <div class="main">
+            <div class="photo">
+                <img src="../static/img/web/other/loginRegister.jpg" alt="photo user">
+            </div>
+            <form class="info">
+                <div class="titleInfo">
+                    <h1>Crear cuenta</h1>
+                    <p>Ingresa tus datos para registrarte y disfruta de beneficios</p>
+                </div>
+                <div class="inputs">
+                    <input type="text" id="nombre" placeholder="Nombre" required>
+                    <input type="text" id="apellido" placeholder="Apellido" required>
+                    <input type="number" id="dni" placeholder="DNI (sin puntos)" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="tel" id="telefono" placeholder="Teléfono (opcional)">
+                    <input type="date" id="fechaNacimiento" placeholder="Fecha de Nacimiento" required>
+                    <input type="password" id="password" placeholder="Contraseña" required>
+                    <input type="password" id="confirmPassword" placeholder="Repite la contraseña" required>
+                </div>
+                <div>
+                    <input type="checkbox" id="politcs" required />
+                    <label for="politcs">Acepto los términos y condiciones</label>
+                </div>
+                <button type="submit" class="button">Registrarse</button>
+                <p class="ytc">
+                    ¿Ya tienes cuenta? <a href="login.html" class="a">Inicia sesión</a>
+                </p>
+            </form>
+        </div>
+    </main>
+    <script src="../static/js/script.js"></script>
+</body>
+</html>

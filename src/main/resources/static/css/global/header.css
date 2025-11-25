@@ -1,0 +1,140 @@
+header {
+    width: 100%;
+    height: var(--headerHeight);
+
+    background-color: var(--colorBlack);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+
+    z-index: 100000;
+}
+
+.menuNav {
+    width: var(--maxWidth);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: var(--fontSizeText);
+    font-weight: var(--fontWeightExtrabold);
+}
+
+
+/* ----------------------------------------- */
+/*                 IZQUIERDA                 */
+/* ----------------------------------------- */
+.menuNav .leftNav {
+    display: flex;
+    align-items: center;
+    gap: 15%;
+}
+
+.menuNav .leftNav .polichefLogo {
+    width: 2rem;
+}
+
+.menuNav .leftNav ul {
+    list-style-type: none;
+    
+    display: flex;
+    gap: 20px;
+}
+
+/* .menuNav .leftNav ul li a {
+    font-size: var(--fontSizeText);
+    font-weight: var(--fontWeightExtrabold);
+} */
+
+/* ------------------------------------------ */
+/*                   DERECHA                  */
+/* ------------------------------------------ */
+.menuNav .rightNav {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.menuNav .rightNav .locals {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menuNav .rightNav .locals svg {
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.menuNav .rightNav .locals a {
+    transition: var(--animationTime);
+}
+
+.menuNav .rightNav .locals svg path {
+    transition: var(--animationTime);
+}
+
+.menuNav .rightNav .locals:hover svg path {
+    fill: var(--colorPoliChef);
+}
+
+.menuNav .rightNav .locals:hover a {
+    color: var(--colorPoliChef);
+}
+
+.menuNav .rightNav .locals:hover  {
+    cursor: pointer;
+}
+
+
+/* ---------------------------------------- */
+/*                  CUENTA                  */
+/* ---------------------------------------- */
+/* .account {
+    font-size: var(--fontSizeText);
+    font-weight: var(--fontWeightExtrabold);
+} */
+
+.account .notLogged {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.account .notLogged .joinUs {
+    background-color: var(--colorWhite);
+    color: var(--colorBlack);
+    padding: 7px 25PX;
+    border-radius: 100px;
+
+    transition: var(--animationTime);
+}
+
+.account .notLogged .joinUs:hover {
+    background-color: var(--colorPoliChef);
+    color: var(--colorWhite);
+}
+
+.account .logged{
+    display: none;
+}
+
+
+/* ------------------------------------------- */
+/*                  ANIMACION                  */
+/* ------------------------------------------- */
+
+.textToRed {
+    transition: var(--animationTime);
+}
+
+.textToRed:hover {
+    color: var(--colorPoliChef);
+}

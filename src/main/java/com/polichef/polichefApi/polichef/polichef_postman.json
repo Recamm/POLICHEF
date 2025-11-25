@@ -1,0 +1,74 @@
+// a. POST /api/usuarios - Registrar usuario
+{
+  "dni": 12345678,
+  "nombre": "Juan",
+  "apellido": "Pérez",
+  "contrasena": "asd",
+  "fechaNacimiento": "1990-05-15",
+  "email": "juan.perez@email.com",
+  "telefono": "1123456789",
+  "preferenciasAlimenticias": [1, 2]
+}
+
+// b. POST /api/admin/platos - Crear plato
+{
+  "nombre": "Pasta Carbonara",
+  "valor": 2500,
+  "descripcion": "Deliciosa pasta italiana con salsa carbonara",
+  "idNocheTematica": 1,
+  "ingredientes": [1, 2, 3],
+  "preferencias": [1]
+}
+
+// b. PUT /api/admin/platos/{id} - Actualizar plato
+{
+  "nombre": "Pasta Carbonara Especial",
+  "valor": 2800,
+  "descripcion": "Deliciosa pasta italiana con salsa carbonara premium",
+  "idNocheTematica": 1
+}
+
+// c. POST /api/pedidos - Realizar pedido
+{
+  "dniCliente": 12345678,
+  "idSucursal": 1,
+  "platos": [
+    {
+      "idPlato": 1,
+      "cantidad": 2
+    },
+    {
+      "idPlato": 2,
+      "cantidad": 1
+    }
+  ]
+}
+
+// e. POST /api/reservas - Reservar mesa
+{
+  "dniCliente": 12345678,
+  "idSucursal": 1,
+  "fechaReserva": "2025-12-15",
+  "cantPersonas": 4,
+  "platos": [
+    {
+      "idPlato": 1,
+      "cantidad": 2
+    },
+    {
+      "idPlato": 3,
+      "cantidad": 2
+    }
+  ]
+}
+
+// f. PUT /api/reservas/{id} - Modificar reserva
+{
+  "fechaReserva": "2025-12-20"
+}
+
+// g. POST /api/reservas/{id}/calificar - Calificar experiencia
+{
+  "puntaje": 5,
+  "descripcion": "Excelente experiencia, la comida estaba deliciosa y el show espectacular"
+}
