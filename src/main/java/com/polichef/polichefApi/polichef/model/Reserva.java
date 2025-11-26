@@ -21,7 +21,7 @@ public class Reserva {
     private Pedido pedido;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "idCalificacion", nullable = false)
+    @JoinColumn(name = "idCalificacion", nullable = true)
     private Calificacion calificacion;
 
     public Reserva() {}

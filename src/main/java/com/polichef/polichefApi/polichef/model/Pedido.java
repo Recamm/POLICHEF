@@ -20,6 +20,9 @@ public class Pedido {
     @JoinColumn(name = "idSucursal", nullable = false)
     private Sucursal sucursal;
 
+    @Column(name = "cantPersonas", nullable = false)
+    private Integer personas;
+
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
     private List<PlatosDelPedido> platos;
 
@@ -42,4 +45,7 @@ public class Pedido {
 
     public Reserva getReserva() { return reserva; }
     public void setReserva(Reserva reserva) { this.reserva = reserva; }
+
+    public Integer getPersonas() { return personas; }
+    public void setPersonas(Integer personas) { this.personas = personas; }
 }

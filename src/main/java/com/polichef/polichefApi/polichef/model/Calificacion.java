@@ -17,6 +17,11 @@ public class Calificacion {
 
     public Calificacion() {}
 
+    public Calificacion(Integer puntaje, String descripcion) {
+        this.puntaje = puntaje;
+        this.descripcion = descripcion;
+    }
+
     public Integer getId() { return id; }
     public void setId(Integer id) { this.id = id; }
 

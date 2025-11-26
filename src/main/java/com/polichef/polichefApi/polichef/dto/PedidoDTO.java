@@ -5,6 +5,7 @@ import java.util.List;
 public class PedidoDTO {
     private Integer dniCliente;
     private Integer idSucursal;
+    private Integer cantPersonas;
     private List<PlatoDelPedidoDTO> platos;
 
     public PedidoDTO() {}
@@ -17,4 +18,7 @@ public class PedidoDTO {
 
     public List<PlatoDelPedidoDTO> getPlatos() { return platos; }
     public void setPlatos(List<PlatoDelPedidoDTO> platos) { this.platos = platos; }
+
+    public Integer getCantPersonas() {return cantPersonas;}
+    public void setCantPersonas(Integer cantPersonas) {this.cantPersonas = cantPersonas;}
 }

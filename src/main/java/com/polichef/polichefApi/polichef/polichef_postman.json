@@ -32,6 +32,7 @@
 {
   "dniCliente": 12345678,
   "idSucursal": 1,
+  "cantPersonas": 3,
   "platos": [
     {
       "idPlato": 1,

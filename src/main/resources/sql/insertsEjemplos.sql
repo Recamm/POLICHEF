@@ -86,8 +86,8 @@ INSERT INTO Pedido (dniCliente, idSucursal, cantPersonas) VALUES
 (41111000, 10, 6);
 
 INSERT INTO Reserva (fechaQueSeReservo, fechaReserva, idPedido, idCalificacion) VALUES
-('2023-03-01','2023-03-10',1,1),
-('2023-03-02','2023-03-12',2,2),
+('2023-03-01','2023-03-10',1,null),
+('2023-03-02','2023-03-12',2,null),
 ('2023-03-05','2023-03-15',3,3),
 ('2023-03-06','2023-03-18',4,4),
 ('2023-03-07','2023-03-20',5,5),

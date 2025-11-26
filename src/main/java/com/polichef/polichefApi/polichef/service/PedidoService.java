@@ -36,6 +36,7 @@ public class PedidoService {
         Pedido pedido = new Pedido();
         pedido.setCliente(cliente);
         pedido.setSucursal(sucursal);
+        pedido.setPersonas(pedidoDTO.getCantPersonas());
 
         Pedido pedidoGuardado = pedidoRepository.save(pedido);
 

@@ -44,6 +44,7 @@ public class ReservaService {
         Pedido pedido = new Pedido();
         pedido.setCliente(cliente);
         pedido.setSucursal(sucursal);
+        pedido.setPersonas(reservaDTO.getCantPersonas());
         Pedido pedidoGuardado = pedidoRepository.save(pedido);
 
         if (reservaDTO.getPlatos() != null && !reservaDTO.getPlatos().isEmpty()) {
@@ -104,11 +105,11 @@ public class ReservaService {
             throw new RuntimeException("El puntaje debe estar entre 1 y 5");
         }
 
-        Calificacion calificacion = reserva.getCalificacion();
-        calificacion.setPuntaje(calificacionDTO.getPuntaje());
-        calificacion.setDescripcion(calificacionDTO.getDescripcion());
+        Calificacion calificacion = new Calificacion(calificacionDTO.getPuntaje(),calificacionDTO.getDescripcion());
+        reserva.setCalificacion(calificacion);
 
         calificacionRepository.save(calificacion);
+        reservaRepository.save(reserva);
 
         if (calificacionDTO.getPuntaje() >= 4) {
             Cliente cliente = reserva.getPedido().getCliente();
@@ -131,4 +132,5 @@ public class ReservaService {
     public List<Reserva> obtenerReservasPorCliente(Integer dniCliente) {
         return reservaRepository.findByClienteDni(dniCliente);
     }
+
 }
